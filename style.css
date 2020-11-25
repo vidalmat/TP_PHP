@@ -1,0 +1,189 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(255, 249, 195);
+}
+
+
+#img_header{
+    width: 100%;
+}
+
+
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    font-size: 4em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    margin-bottom: -110px;
+}
+
+p{
+    color:  rgb(95, 95, 95);
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.li_haut{
+    display: inline-block;
+    background: rgb(95, 95, 95); 
+    width: 100%;
+    height: 105px;
+    vertical-align: middle;
+}
+
+
+.li_haut li{         
+    width: 45%;                /*lien des listes à puces en haut de la section */
+    margin: 10px;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 410px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+
+.li_haut li a{
+    background: rgb(95, 95, 95); 
+    text-decoration: none;
+    color: white; 
+}
+
+
+.li_haut li a:hover{
+    background: orange;
+}
+
+
+span{
+    border: 1px solid red;
+    position: relative;
+    color: red;
+}
+
+
+
+#liens li a{                            /*lien du texte de l'image "lire l'article"*/
+    text-decoration: none;
+}
+
+
+.bouton a{                              /*bouton "lire l'article"*/
+    display: inline-block;
+    border: 2.5px solid white;
+    color: white;
+    text-decoration: none;
+    background: rgb(253, 196, 7);
+    text-transform: uppercase;
+    margin-top: -60px;
+    width: 200px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.bouton a:hover{
+    background: rgb(170, 170, 170);
+}
+
+.bouton p{
+    font-size: 1em;
+    line-height: 2.4em;
+}
+
+.conteneur{                             /* conteneur des trois images*/
+    display: flex;
+    flex-direction: column;
+}
+
+#epitech img{                           /*première image epitech*/
+    width: 60%;
+    margin-left: 310px;
+    border-radius: 10px;
+}
+
+#futura img{                            /*seconde image futura*/
+    width: 60%;
+    margin-left: 310px;
+    border-radius: 10px;
+}
+
+#pwa img{                               /*troisième image pwa*/
+    width: 60%;
+    margin-left: 310px;
+    border-radius: 10px;
+}
+
+#epitech h2{                            /*réglage du h2 du premier bloc*/
+    position: relative;
+    width: 60%;
+    height: 40px;
+    margin-top: 80px;
+    margin-left: 310px;
+    border-radius: 10px 10px 0px 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(129, 129, 129);
+    margin-bottom: -18px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+
+
+#futura h2{                             /*réglage du h2 du second bloc*/
+    position: relative;
+    width: 60%;
+    height: 40px;
+    margin-left: 310px;
+    border-radius: 10px 10px 0px 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(129, 129, 129);
+    margin-bottom: -39px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+#pwa h2{                                /*réglage du h2 du troisième bloc*/
+    position: relative;
+    width: 60%;
+    height: 40px;
+    margin-left: 310px;
+    border-radius: 10px 10px 0px 0px;
+    background: rgb(255, 255, 255);
+    color: rgb(129, 129, 129);
+    margin-bottom: -39px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+
+
+/*effet scroll vers le haut avec une flèche */
+
+#scroll_vers_le_haut
+{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+    border-radius: 50px;
+    padding-top: 0.5px;         /* top et left pour rendre le cercle autour de la flèche, uniforme */
+    padding-left: 0.5px;
+}
+
+#scroll_vers_le_haut img 
+{
+    width: 25px;
+    box-shadow: none;
+}
+
+/**/
