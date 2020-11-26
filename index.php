@@ -62,7 +62,7 @@
             </div>
            
 
-            <?php require "html/page.php" ?>
+            <?php require "html/index.php" ?>
     
 </body>
 </html>
