@@ -1,26 +1,40 @@
 <?php
 
+    // pour savoir en cas de bug (debug), afin de vérifier que tout fonctionne comme console.log
+    // var_dump($_GET);
 
-    var_dump($_GET);
 
+    // Structure de routage : définir la page qui sera inclue, en fonction de la valeur $_GET;["page] (choix de l'utilisateur)
+    // Si $_GET["page] est défini :
     if(isset($_GET["page"])) {
 
-        $tabarticle = $_GET["page"].".php";
+        $tabArticle = $_GET["page"].".php";
 
         switch($_GET["page"]) {
-            case "page1" : $tabArticle = "page1.php";
-            break
-            case "page2" : $tabArticle = "page2.php";
-            break
-            case "page3" : $tabArticle = "page3.php";
-            break
-            default : $tabArticle = "page1.php";
+            case "page1" : $tabArticle = "accueil.php";
+            break;
+            case "page2" : $tabArticle = "page1.php";
+            break;
+            case "page3" : $tabArticle = "page2.php";
+            break;
+            case "page4" : $tabArticle = "page3.php";
+            break;
+            default : $tabArticle = "accueil.php";              /* solution par défaut en cas d'un choix non prévu */
         }
 
     }else {
-        $tabarticle = "page1.php";
+
+        $tabArticle = "accueil.php";
+
     }
+
     
+
+
+
+
+
+
 ?>
 
 
@@ -62,7 +76,7 @@
             </div>
            
 
-            <?php require "html/index.php" ?>
+            <?php require $tabArticle ?>
     
 </body>
 </html>
