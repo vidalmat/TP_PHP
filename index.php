@@ -19,6 +19,8 @@
             break;
             case "page4" : $tabArticle = "page3.php";
             break;
+            case "vuearticle" : $tabArticle = "vuearticle.php";
+            break;
             default : $tabArticle = "accueil.php";              /* solution par défaut en cas d'un choix non prévu */
         }
 
@@ -61,7 +63,7 @@
 
             <div class="li_haut">
                 <ul>
-                    <li class="row"><a href="index.php?page=page1">Accueil</a></li>
+                    <li class="row"><a href="index.php?page=page1">Lire la suite</a></li>
                     <li class="row"><a href="index.php?page=page2">Epitech</a></li>
                     <li class="row"><a href="index.php?page=page3">Futura</a></li>
                     <li class="row"><a href="index.php?page=page4">Le futur du Web Mobile</a></li>

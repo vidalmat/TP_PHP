@@ -13,7 +13,7 @@
 
 
     $html .= "<h3>" . $articles[0]["titre"] . "</h3>";
-    $html .= "<p class=\"paragraphe\">" . substr($articles[0]["Description"], 0, 20) . "..." . "</p>";
+    $html .= "<p class=\"paragraphe\">" . substr($articles[0]["Description"], 0, 20) . "..." . "</p>" . "<a href=\"index.php?page=page1\">Lire la suite</a>";
 
     // foreach($articles[i] as $article) {
 

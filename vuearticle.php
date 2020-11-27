@@ -1,7 +1,7 @@
 <?php
 
 
-
+    // require = "articles.php";
 
 
 ?>
@@ -17,6 +17,7 @@
 </head>
     <body>
 
+        <a href="index.php?page=page1">Accueil</a><!-- fil d'ariane à faire -->
 
         <article>
 
@@ -32,12 +33,36 @@
 
         </div>
 
-        <?= $html?>
+        <span></span>
 
-        <h3>Titre de mon article</h3>
+        <h3>Les technologies de 2020 qui vont changer le monde</h3>
 
-        <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
+        <h4>L’Internet quantique sécurisé</h4>
+
+            <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
             iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p>
+
+        <h4>La médecine hyper-personnalisée</h4>
+
+            <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
+            iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p>
+
+        <h4>La monnaie virtuelle</h4>
+
+            <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
+            iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p>
+
+        <h4>Les médicaments anti-âge</h4>
+
+            <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
+            iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p>
+
+        <h4>L’intelligence artificielle pour trouver des nouvelles molécules</h4>
+
+            <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
+            iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p>
+
+        
 
         </article>
     
