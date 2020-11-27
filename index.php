@@ -34,11 +34,12 @@
 ?>
 
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v={<?php uniqid() ?>}">">
     <title>TP PHP</title>
 </head>
 <body>
@@ -63,10 +64,10 @@
 
             <div class="li_haut">
                 <ul>
-                    <li class="row"><a href="index.php?page=page1">Accueil</a></li>
-                    <li class="row"><a href="index.php?page=page2">Epitech</a></li>
-                    <li class="row"><a href="index.php?page=page3">Futura</a></li>
-                    <li class="row"><a href="index.php?page=page4">Le futur du Web Mobile</a></li>
+                    <li><a href="index.php?page=page1">Accueil</a></li>
+                    <li><a href="index.php?page=page2">Epitech</a></li>
+                    <li><a href="index.php?page=page3">Futura</a></li>
+                    <li><a href="index.php?page=page4">Le futur du Web Mobile</a></li>
                 </ul>
                         
             </div>

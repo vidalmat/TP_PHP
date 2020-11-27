@@ -6,6 +6,7 @@ require_once "articles.php";
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,11 +16,13 @@ require_once "articles.php";
 </head>
 <body>
 
+        
+
         <header>
 
-            <h1>Innovations de l'univers du Dev Web</h1>
+            <h1>Welcome sur notre site</h1>
 
-                <img src="images/img_header2.png" alt="image header" id="img_header">
+                <img src="images/accueil.jpg" alt="image header" id="img_header">
 
 
         </header>
@@ -35,9 +38,9 @@ require_once "articles.php";
 
             <div class="li_haut">
                 <ul>
-                    <li class="row"><a href="https://www.epitech.eu/fr/" >Epitech</a></li>
-                    <li class="row"><a href="https://www.futura-sciences.com/sciences/actualites/magazine-science-10-technologies-2020-vont-changer-monde-6166/">Futura</a></li>
-                    <li class="row"><a href="https://blog.arca-computing.fr/pwa-le-futur-du-web-mobile/">Le futur du Web Mobile</a></li>
+                    <li><a href="index.php?page=page2">Epitech</a></li>
+                    <li><a href="index.php?page=page3">Futura</a></li>
+                    <li><a href="index.php?page=page4">Le futur du Web Mobile</a></li>
                 </ul>
                         
             </div>
