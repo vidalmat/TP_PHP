@@ -28,12 +28,6 @@
 
     }
 
-    
-
-
-
-
-
 
 ?>
 
@@ -75,8 +69,10 @@
                         
             </div>
            
-
             <?php require $tabArticle ?>
+
+            
+            
     
 </body>
 </html>

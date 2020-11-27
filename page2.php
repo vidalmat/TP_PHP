@@ -1,7 +1,17 @@
 <?php
 
 
+require_once "articles.php";
 
+$html = "";
+
+
+// $html .= "<h3>" . $articles[0]["titre"] . "</h3>";
+
+
+
+$html .= "<h3>" . $articles[1]["titre"] . "</h3>";
+$html .= "<p class=\"paragraphe\">" . substr($articles[1]["Description"], 0, 20) . "..." . "</p>";
 
 
 ?>
@@ -21,9 +31,11 @@
 
 </div>
 
-<h3>Titre de mon article</h3>
+<?= $html?>
+
+<!-- <h3>Titre de mon article</h3>
 
 <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis <br>
-     iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p>
+     iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.</p> -->
 
 </article>
