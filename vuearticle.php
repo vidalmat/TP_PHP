@@ -1,7 +1,11 @@
 <?php
 
 
-    // require = "articles.php";
+    require = "articles.php";
+
+    $article = $articles[2];
+
+
 
 
 ?>
@@ -17,7 +21,7 @@
 </head>
     <body>
 
-        <a href="index.php?page=page1">Accueil</a><!-- fil d'ariane à faire -->
+        <p class="fildar"><a href="index.php?page=page1">Accueil</a> / Les technologies de 2020 qui vont changer le monde</p><!-- fil d'ariane -->
 
         <article>
 

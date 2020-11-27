@@ -56,7 +56,17 @@ h3{
 }
 
 
+/* Fil d'ariane de la page vuearticle.php*/
 
+.fildar{
+    font-size: 1em;
+    text-align: left;
+    margin-bottom: 100px;
+    margin-left: 10px;
+    color: rgb(95, 95, 95);
+}
+
+/**/
 
 
 .li_haut{
