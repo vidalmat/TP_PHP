@@ -4,12 +4,11 @@
 $article1 = [ "titre" => "Epitech", 
 "Description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis
 iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.",
- "image" => "futura.jpg"];
+ "image" => "images/futura.jpg"];
 
- $article2 = [ "titre" => "Les technologies de 2020 qui vont changer le monde", 
-"Description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis
-iusto consequatur soluta aspernatur error asperiores. Accusamus, laboriosam voluptatibus.",
- "auteur" => "moi-même"];
+ $article2 = [ "titre" => "Futura, les technologies de 2020 qui vont changer le monde", 
+"Description" => "https://www.futura-sciences.com/sciences/actualites/magazine-science-10-technologies-2020-vont-changer-monde-6166/",
+"image" => "images/futura.jpg"];
 
  $article3 = [ "titre" => "Le futur du Web Mobile", 
 "Description" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum sit, suscipit adipisci, quibusdam explicabo earum saepe aperiam, ducimus necessitatibus facilis

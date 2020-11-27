@@ -29,12 +29,12 @@
 
         <div id="futura">
 
-            <h2>Futura, les dix technologies de 2020 qui vont changer le monde</h2>
+            <h2><?= $article["titre"]; ?></h2>
 
             <img src=<?= $article["image"]; ?>>
 
             <div class="bouton">
-                <p><a href="https://www.futura-sciences.com/sciences/actualites/magazine-science-10-technologies-2020-vont-changer-monde-6166/">Lire l'article</a></p>
+                <p><a href=<?= $article["Description"]; ?>>Lire l'article</a></p>
             </div>
 
         </div>
