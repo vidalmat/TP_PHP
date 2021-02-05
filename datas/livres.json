@@ -1,0 +1,14 @@
+[
+  {
+    "titre": "le rouge et le noir",
+    "resume": "lorem",
+    "auteur": "stendahl",
+    "categorie": "classique"
+  },
+  {
+    "titre": "le seigneur des anneaux ",
+    "resume": "lorem",
+    "auteur": "j r tolkien",
+    "categorie": "fantasy"
+  }
+]

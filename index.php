@@ -1,37 +1,111 @@
 <?php
 
-    // pour savoir en cas de bug (debug), afin de vérifier que tout fonctionne comme console.log
-    // var_dump($_GET);
+$route = (isset($_GET["route"]))? $_GET["route"] : "accueil";
 
 
-    // Structure de routage : définir la page qui sera inclue, en fonction de la valeur $_GET;["page] (choix de l'utilisateur)
-    // Si $_GET["page] est défini :
-    if(isset($_GET["page"])) {
+// TRADUCTION DU CODE CI-DESSUS:
+// if(isset($_GET["route"])) {
+//     $route = $_GET["route"];
+// } else {
+//     $route = "accueil";
+// }
 
-        $tabArticle = $_GET["page"].".php";
 
-        switch($_GET["page"]) {
-            case "page1" : $tabArticle = "accueil.php";
-            break;
-            case "page2" : $tabArticle = "page1.php";
-            break;
-            case "page3" : $tabArticle = "page2.php";
-            break;
-            case "page4" : $tabArticle = "page3.php";
-            break;
-            case "vuearticle" : $tabArticle = "vuearticle.php";
-            break;
-            default : $tabArticle = "accueil.php";              /* solution par défaut en cas d'un choix non prévu */
-        }
 
-    }else {
+// Liste des routes (fonctionnalités) :
+// index.php?route=accueil (ou rien) : Affichage page d'accueil
+// index.php?route=autrepage : Affichage d'une autre page pour l'exemple
+// index.php?route=formlivre : Affichage du formulaire pour ajouter un livre
+// index.php?route=ajoutlivre : Fonctionnalité redirigée permettant l'ajout effectif du livre
 
-        $tabArticle = "accueil.php";
 
-    }
+
+// ROUTER :
+switch($route) {
+
+    case "accueil" : $toTemplate = showHome();
+    break;
+    case "autrepage" : $toTemplate = showAutrePage();
+    break;
+    case "formlivre" : $toTemplate = showFormLivre();
+    break;
+    case "ajoutlivre" : ajoutLivre();
+    break;
+    default : $toTemplate = ["template" => "404.html"];
+
+}
+
+
+// 
+
+/**
+ * Affichage de la page d'accueil 
+ * Comptabilisation du nombre d'affichages
+ * @return array : Retourne dans un tableau: le template à afficher (accueil.html)
+ */
+function showHome(): array {
+
+    $ressource = fopen("compteur.txt", "r");
+    $compteur = fgets($ressource);
+    fclose($ressource);
+    $compteur++;
+    
+    echo $compteur;
+    
+    $ressource = fopen("compteur.txt", "w");
+    fwrite($ressource, $compteur);
+    fclose($ressource);
+
+    return ["template" => "accueil.html"];
+}
+
+/**
+ * Affichage d'une page pour "l'exemple"
+ * @return array : Retourne dans un tableau: le template à afficher (autrepage.html)
+ */
+function showAutrePage(): array {
+
+    return ["template" => "autrepage.html"];
+}
+
+/**
+ * Affichage du formulaire d'ajout d'un livre
+ * @return array : Retourne dans un tableau: le template à afficher (formulaire.php)
+ */
+function showFormLivre(): array {
+
+    require_once "models/Livre.php";
+
+    $livres = Livre::getLivres();
+
+    //echo "Données récupérées via getLivres() : <br>";
+    //var_dump($livres);
+
+    return ["template" => "formulaire.php", "datas" => $livres];
+}
+
+/**
+ * Ajout d'un livre à partir du modèle "Livre"
+ * Création (instanciation) d'un nouveau livre, à partir des données du formulaire
+ * Appel à sa méthode de sauvegarde
+ * Redirection vers route formlivre (affichage du formulaire)
+ */
+function ajoutLivre() {
+
+    require_once "models/Livre.php";
+
+    $livre = new Livre($_POST["titre"], $_POST["resume"], $_POST["auteur"], $_POST["categorie"]);
+    $livre->saveBook();
+
+    // Pensez à commenter la redirection temporairement pour débuguer (voir vos var_dump)
+    header("Location:index.php?route=formlivre");
+    exit;
+}
+
 
 
 ?>
+
 
 
 
@@ -39,43 +113,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css?v={<?php uniqid() ?>}">">
-    <title>TP PHP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
 
-        <header>
-
-            <h1>Innovations de l'univers du Dev Web</h1>
-
-                <img src="images/img_header2.png" alt="image header" id="img_header">
-
-
-        </header>
-
-        <section>
-
-
-            <div id="scroll_vers_le_haut">   <!-- div pour faire une flèche qui scrolle vers le haut -->
-                <a href="#top"><img src="images/fleche_haut2.png" alt="Retourner en haut" /></a>
-            </div>                                      <!---->
-
-            <p>Parmi tous ces articles réunissant toutes les innovations récentes, faites votre choix :</p>
-
-            <div class="li_haut">
-                <ul>
-                    <li><a href="index.php?page=page1">Accueil</a></li>
-                    <li><a href="index.php?page=page2">Epitech</a></li>
-                    <li><a href="index.php?page=page3">Futura</a></li>
-                    <li><a href="index.php?page=page4">Le futur du Web Mobile</a></li>
-                </ul>
-                        
-            </div>
-           
-            <?php require $tabArticle ?>
-
-            
-            
+    <nav>
+        <ul>
+            <li><a href="index.php?route=accueil">Accueil</a></li>
+            <li><a href="index.php?route=autrepage">Autre page</a></li>
+            <li><a href="index.php?route=formlivre">Formulaire d'ajout d'un livre</a></li>
+        </ul>
+    </nav>
     
+    <?php require "templates/" . $toTemplate['template']; ?>
+
 </body>
 </html>
